@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "passwd",
+	"patterns": [
+		{
+			"include": "#var_declaration"
+		}
+	],
+	"repository": {
+		"var_declaration": {
+			"patterns": [
+				{
+						"match": "(\\S+):(\\S+):(\\S+):(\\S+):(.*\\S):(\\S+):(\\S+)",
+						"captures": {
+						"1": {"patterns": [{"include": "#username"}]},
+						"2": {"patterns": [{"include": "#password"}]},
+						"3": {"patterns": [{"include": "#uid"}]},
+						"4": {"patterns": [{"include": "#gid"}]},
+						"5": {"patterns": [{"include": "#comment"}]},
+						"6": {"patterns": [{"include": "#homedir"}]},
+						"7": {"patterns": [{"include": "#loginshell"}]}
+						}
+				}
+			],
+			"repository": {
+				"username": {
+					"patterns": [
+						{
+							"name" : "storage.type.example",
+							"match": "[.*]"
+						}
+					]
+				},
+				"password": {
+					"patterns": [
+						{
+							"name" : "storage.type.example",
+							"match": "[.*]"
+						}
+					]
+				},
+				"uid": {
+					"patterns": [
+						{
+							"name" : "constant.numeric.example",
+							"match": "[0-9]"
+						}
+					]
+				},
+				"gid": {
+					"patterns": [
+						{
+							"name" : "constant.numeric.example",
+							"match": "[0-9]"
+						}
+					]
+				},
+				"comment": {
+					"patterns": [
+						{
+							"name" : "comment.block.example",
+							"match": "[.*]"
+						}
+					]
+				},
+				"homedir": {
+					"patterns": [
+						{
+							"name" : "storage.type.example",
+							"match": "var"
+						}
+					]
+				},
+				"loginshell": {
+					"patterns": [
+						{
+							"name" : "storage.type.example",
+							"match": "var"
+						}
+					]
+				}
+			}
+		}
+	},
+	"scopeName": "source.example"
+}

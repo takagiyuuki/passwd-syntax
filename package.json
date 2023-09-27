@@ -1,0 +1,26 @@
+{
+  "name": "passwd-syntax",
+  "displayName": "passwd syntax",
+  "description": "Provides Linux passwd file syntax for Visual Studio Code",
+  "version": "0.0.1",
+	"publisher": "takagiyuuki",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "",
+      "aliases": ["passwd", ""],
+      "extensions": ["passwd"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "",
+      "scopeName": "source.json",
+      "path": "./syntaxes/.tmLanguage.json"
+    }]
+  }
+}
