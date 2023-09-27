@@ -4,6 +4,10 @@
   "description": "Provides Linux passwd file syntax for Visual Studio Code",
   "version": "0.0.1",
 	"publisher": "takagiyuuki",
+	"repository": {
+		"type": "githubusercontent",
+		"url": "https://github.com/takagiyuuki/passwd-syntax"
+	},
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -12,14 +16,14 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "",
+      "id": "passwd",
       "aliases": ["passwd", ""],
       "extensions": ["passwd"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "",
-      "scopeName": "source.json",
+      "language": "passwd",
+      "scopeName": "source.example",
       "path": "./syntaxes/.tmLanguage.json"
     }]
   }
